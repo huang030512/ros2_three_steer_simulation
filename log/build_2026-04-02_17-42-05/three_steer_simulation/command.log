@@ -1,0 +1,2 @@
+Invoking command in '/home/hzx/three_steer_simulation/build/three_steer_simulation': /usr/bin/cmake /home/hzx/three_steer_simulation -DCMAKE_INSTALL_PREFIX=/home/hzx/three_steer_simulation/install/three_steer_simulation
+Invoked command in '/home/hzx/three_steer_simulation/build/three_steer_simulation' returned '1': /usr/bin/cmake /home/hzx/three_steer_simulation -DCMAKE_INSTALL_PREFIX=/home/hzx/three_steer_simulation/install/three_steer_simulation

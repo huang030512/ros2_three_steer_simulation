@@ -1,0 +1,32 @@
+[0.007s] Invoking command in '/home/hzx/three_steer_simulation/build/three_steer_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hzx/three_steer_simulation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hzx/three_steer_simulation/install/three_steer_simulation
+[0.017s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.095s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.166s] -- Configuring done
+[0.168s] -- Generating done
+[0.169s] -- Build files have been written to: /home/hzx/three_steer_simulation/build/three_steer_simulation
+[0.172s] Invoked command in '/home/hzx/three_steer_simulation/build/three_steer_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hzx/three_steer_simulation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hzx/three_steer_simulation/install/three_steer_simulation
+[0.173s] Invoking command in '/home/hzx/three_steer_simulation/build/three_steer_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hzx/three_steer_simulation/build/three_steer_simulation -- -j16 -l16
+[0.208s] Invoked command in '/home/hzx/three_steer_simulation/build/three_steer_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hzx/three_steer_simulation/build/three_steer_simulation -- -j16 -l16
+[0.216s] Invoking command in '/home/hzx/three_steer_simulation/build/three_steer_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hzx/three_steer_simulation/build/three_steer_simulation
+[0.223s] -- Install configuration: ""
+[0.223s] -- Execute custom install script
+[0.223s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation//urdf/three_steer.urdf.xacro
+[0.231s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation//launch/three_steer_gazebo.launch.py
+[0.238s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation//config/controllers.yaml
+[0.246s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation//scripts/three_steer_kinematics.py
+[0.254s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/ament_index/resource_index/package_run_dependencies/three_steer_simulation
+[0.262s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/ament_index/resource_index/parent_prefix_path/three_steer_simulation
+[0.270s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/environment/ament_prefix_path.sh
+[0.278s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/environment/ament_prefix_path.dsv
+[0.285s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/environment/path.sh
+[0.292s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/environment/path.dsv
+[0.299s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/local_setup.bash
+[0.308s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/local_setup.sh
+[0.315s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/local_setup.zsh
+[0.323s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/local_setup.dsv
+[0.332s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/package.dsv
+[0.341s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/ament_index/resource_index/packages/three_steer_simulation
+[0.349s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/cmake/three_steer_simulationConfig.cmake
+[0.357s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/cmake/three_steer_simulationConfig-version.cmake
+[0.365s] -- Symlinking: /home/hzx/three_steer_simulation/install/three_steer_simulation/share/three_steer_simulation/package.xml
+[0.376s] Invoked command in '/home/hzx/three_steer_simulation/build/three_steer_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hzx/three_steer_simulation/build/three_steer_simulation

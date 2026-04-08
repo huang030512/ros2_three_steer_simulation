@@ -1,0 +1,4 @@
+Invoking command in '/home/hzx/three_steer_simulation/build/three_steer_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hzx/three_steer_simulation/build/three_steer_simulation -- -j16 -l16
+Invoked command in '/home/hzx/three_steer_simulation/build/three_steer_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hzx/three_steer_simulation/build/three_steer_simulation -- -j16 -l16
+Invoking command in '/home/hzx/three_steer_simulation/build/three_steer_simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hzx/three_steer_simulation/build/three_steer_simulation
+Invoked command in '/home/hzx/three_steer_simulation/build/three_steer_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hzx/three_steer_simulation/build/three_steer_simulation

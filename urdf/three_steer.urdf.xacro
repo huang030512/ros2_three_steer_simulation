@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<robot name="three_steer_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- 由 launch 传入 controllers.yaml 绝对路径 -->
+  <xacro:arg name="controllers_file" default=""/>
+
+  <link name="base_link">
+    <inertial>
+      <mass value="12.0"/>
+      <inertia ixx="0.18" iyy="0.18" izz="0.28" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.36 0.36 0.08"/>
+      </geometry>
+      <material name="base_blue">
+        <color rgba="0.2 0.45 0.7 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.36 0.36 0.08"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- 三台舵轮：等边三角形，+X 前向；舵绕 Z，轮绕 Y -->
+  <xacro:macro name="steer_wheel" params="prefix tx ty">
+    <link name="${prefix}_steer_link">
+      <inertial>
+        <mass value="0.02"/>
+        <inertia ixx="1e-5" iyy="1e-5" izz="1e-5" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+    <link name="${prefix}_wheel_link">
+      <inertial>
+        <mass value="0.45"/>
+        <inertia ixx="0.0012" iyy="0.0006" izz="0.0012" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+        <geometry>
+          <cylinder radius="0.07" length="0.05"/>
+        </geometry>
+        <material name="wheel_grey">
+          <color rgba="0.2 0.2 0.22 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="1.57079632679 0 0"/>
+        <geometry>
+          <cylinder radius="0.07" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}_steer_joint" type="revolute">
+      <origin xyz="${tx} ${ty} -0.11" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="${prefix}_steer_link"/>
+      <axis xyz="0 0 1"/>
+      <limit effort="80" velocity="3.0" lower="-3.14159" upper="3.14159"/>
+    </joint>
+    <joint name="${prefix}_wheel_joint" type="continuous">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}_steer_link"/>
+      <child link="${prefix}_wheel_link"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="40" velocity="40"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:steer_wheel prefix="front" tx="0.32" ty="0"/>
+  <xacro:steer_wheel prefix="left" tx="-0.16" ty="0.277128"/>
+  <xacro:steer_wheel prefix="right" tx="-0.16" ty="-0.277128"/>
+
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="front_steer_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="left_steer_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="right_steer_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="front_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="left_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="right_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <parameters>$(arg controllers_file)</parameters>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="front_wheel_link">
+    <mu1>1.2</mu1>
+    <mu2>1.0</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_wheel_link">
+    <mu1>1.2</mu1>
+    <mu2>1.0</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="right_wheel_link">
+    <mu1>1.2</mu1>
+    <mu2>1.0</mu2>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+</robot>
