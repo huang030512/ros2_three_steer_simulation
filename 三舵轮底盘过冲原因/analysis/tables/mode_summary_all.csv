@@ -1,0 +1,16 @@
+﻿mode,label,samples,segments,mean_len,dataset
+idle,改进前 bug 复现,8500,48,177.08333333333334,bug
+forward,改进前 bug 复现,2932,36,81.44444444444444,bug
+translate,改进前 bug 复现,214,3,71.33333333333333,bug
+rotate,改进前 bug 复现,1997,31,64.41935483870968,bug
+compound,改进前 bug 复现,90,8,11.25,bug
+idle,改进 v1（中间版本）,1444,18,80.22222222222223,improved_v1
+forward,改进 v1（中间版本）,873,11,79.36363636363636,improved_v1
+translate,改进 v1（中间版本）,191,2,95.5,improved_v1
+rotate,改进 v1（中间版本）,589,5,117.8,improved_v1
+compound,改进 v1（中间版本）,54,2,27.0,improved_v1
+idle,改进 v2（最终版本）,983,10,98.3,improved_final
+forward,改进 v2（最终版本）,771,13,59.30769230769231,improved_final
+translate,改进 v2（最终版本）,23,1,23.0,improved_final
+rotate,改进 v2（最终版本）,439,6,73.16666666666667,improved_final
+compound,改进 v2（最终版本）,28,5,5.6,improved_final

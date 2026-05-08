@@ -1,0 +1,5 @@
+﻿cmd_idx_switch,log_idx_release,stack_peak_vx,release_step,fbA_residual_deg,window_cmd_len
+583,1319,0.0298,0.03,8.59,1
+589,1337,0.1022,0.102,2.84,1
+684,1586,0.152,0.012,2.87,13
+835,1948,0.237,0.016,6.76,16
